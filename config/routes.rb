@@ -8,9 +8,7 @@ Rails.application.routes.draw do
   # end
 
   namespace :api do
-    get "/the_contact" => "contacts#show_contact"
-    get "/all_contacts" => "contacts#every_contact"
-
+    get "/contacts" => "contacts#index"
   end
   
 end
