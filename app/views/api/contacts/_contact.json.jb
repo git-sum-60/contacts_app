@@ -3,7 +3,7 @@
   first_name: contact.first_name,
   middle_name: contact.middle_name,
   last_name: contact.last_name,
-  email: contact.email,
+  email: contact.email,  
   phone_number: contact.phone_number,
   updated_at: contact.friendly_updated_at,
   japan_phone_number: contact.japan_phone_number,

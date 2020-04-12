@@ -3,19 +3,20 @@ class Api::ContactsController < ApplicationController
     p "*" * 88
     p current_user
     p "*" * 88
-    if current_user 
-      # all the contacts
-      # but only MY contacts
-      # and only in a certain group
+    # if current_user 
+    #   # all the contacts
+    #   # but only MY contacts
+    #   # and only in a certain group
 
-      group = Group.find_by(name: params[:category_name])
-      work_people = group.contacts
-      my_work_people = work_people.where(user_id: current_user.id)
+    #   group = Group.find_by(name: params[:category_name])
+    #   work_people = group.contacts
+    #   my_work_people = work_people.where(user_id: current_user.id)
 
-      @contacts = my_work_people
-    else 
-      @contacts = []
-    end
+    #   @contacts = my_work_people
+    # else 
+    #   @contacts = []
+    # end
+    @contacts = Contact.all
     render 'index.json.jb'
   end
 
